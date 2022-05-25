@@ -39,7 +39,7 @@ import javax.swing.border.EtchedBorder;
 	Icon ic28=new ImageIcon(this.getClass().getResource("/image/blank.jpg"));  
 	Icon ic29=new ImageIcon(this.getClass().getResource("/image/blank.jpg"));  
 	  
-	Window(){  
+	public Window(){  
 	  
 	super("pic puzzle");  
 	  
@@ -125,8 +125,8 @@ import javax.swing.border.EtchedBorder;
 	add(Up);add(Down);add(Left);add(Right); Up.addActionListener(this);
 	Down.addActionListener(this);Left.addActionListener(this);Right.addActionListener(this);
 	setLayout(null);  
-	setSize(800,800);  
-	setVisible(true);  
+	setSize(800,522); 
+	setBounds(300, 150, 800, 522);
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	}  
 	  

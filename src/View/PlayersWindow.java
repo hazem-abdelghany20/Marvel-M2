@@ -17,6 +17,18 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 	Player Player1;
 	Player Player2;
 	
+	public JTextField getPl1() {
+		return Pl1;
+	}
+
+
+
+	public JTextField getPl2() {
+		return Pl2;
+	}
+
+
+
 	public PlayersWindow(){  
 		
 		super("pic puzzle");  
@@ -30,10 +42,7 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 		player2= new JLabel("Player 2:");
 		player2.setBounds(550, 300, 100, 30);
 		
-		Pl1=new JTextField();  
-        Pl1.setBounds(100,350,150,20);  
-        Pl2=new JTextField();  
-        Pl2.setBounds(550,350,150,20);  
+		  
 		
 		
 	
@@ -42,24 +51,13 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 		Enter.setForeground(Color.red);
 		Enter.setBackground(Color.BLACK);
     
-		add(Enter);add(instruction);add(player1);add(player2)
-		;add(Pl1);add(Pl2);
+		add(instruction);add(player1);add(player2);
 		
-		Pl1.addActionListener(this);Pl2.addActionListener(this);
 		
-		Enter.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if(Pl1.getText()==null||Pl2.getText()==null) {return;
-				}else {
-				String P1name = Pl1.getText();
-				String P2name = Pl2.getText();
-				Player1 = new Player(P1name);
-				Player2 = new Player(P2name);
-				PlayersWindow.this.setVisible(false);
-				new Window();}
-	     }});
+
 	
 	setLayout(null);  
+	setBounds(300, 150, 800, 522);
 	setSize(800,800); 
 	  
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
@@ -95,6 +93,15 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 
 		
 	}//end of actionPerformed  
+	
+	public void addd(JButton j) {
+		add(j);
+	}
+	
+	public void addd(JTextField j) {
+		add(j);
+	}
+	
 	  
 	public static void main(String args[]){  
 	new PlayersWindow();  

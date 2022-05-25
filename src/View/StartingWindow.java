@@ -27,6 +27,7 @@ public class StartingWindow  extends JFrame {
         setLayout(new FlowLayout());
 
         setSize(800,522);
+        setBounds(300, 150, 800, 522);
 		
 		
 	JLabel Title = new JLabel("Marvellous Wars");
