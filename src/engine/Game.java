@@ -678,4 +678,7 @@ public class Game {
 	public static int getBoardheight() {
 		return BOARDHEIGHT;
 	}
+	public static void main (String[] args ) {
+		
+	}
 }
