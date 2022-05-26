@@ -39,8 +39,8 @@ import model.world.Hero;
 import model.world.Villain;
 
 public class Game {
-	private static ArrayList<Champion> availableChampions;
-	private static ArrayList<Ability> availableAbilities;
+	private static ArrayList<Champion> availableChampions= new ArrayList<Champion>();
+	private static ArrayList<Ability> availableAbilities= new ArrayList<Ability>();;
 	private Player firstPlayer;
 	private Player secondPlayer;
 	private Object[][] board;
@@ -52,10 +52,7 @@ public class Game {
 
 	public Game(Player first, Player second) {
 		firstPlayer = first;
-
 		secondPlayer = second;
-		availableChampions = new ArrayList<Champion>();
-		availableAbilities = new ArrayList<Ability>();
 		board = new Object[BOARDWIDTH][BOARDHEIGHT];
 		turnOrder = new PriorityQueue(6);
 		placeChampions();

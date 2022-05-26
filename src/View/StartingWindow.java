@@ -11,10 +11,11 @@ import View.* ;
 public class StartingWindow  extends JFrame {  
 	JButton Play;
 	JLabel l1;
-	
+	JPanel pan;
 	  
 	public StartingWindow(){  
 		super("Marvellous");  
+		pan = new JPanel();
 		
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -31,17 +32,22 @@ public class StartingWindow  extends JFrame {
 		
 		
 	JLabel Title = new JLabel("Marvellous Wars");
-	Title.setFont(new Font("Serif", Font.BOLD, 50));
+	Title.setForeground(Color.white);
+	Title.setFont(new Font("serif", Font.BOLD, 50));
 	Title.setBounds(200, 100, 500, 200);
 
-	add(Title);
-	 
+	pan.add(Title,BorderLayout.CENTER);
+	add(pan);
+	pan.setBackground(Color.red);
 	setVisible(true);  
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	}  
 	  
-	public void addd(JButton j) {
-		add(j);
+	public void addd(JButton b) {
+		add(b);
+	}
+	public void addd(JButton b,String bl) {
+		add(b,bl);
 	}
 	  
 	public static void main(String args[]){  

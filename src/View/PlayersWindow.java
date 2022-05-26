@@ -22,7 +22,6 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 	}
 
 
-
 	public JTextField getPl2() {
 		return Pl2;
 	}
@@ -34,31 +33,30 @@ public class PlayersWindow  extends JFrame implements ActionListener{
 		super("pic puzzle");  
 	 
 		instruction= new JLabel("Please Enter your names:");
-		instruction.setBounds(300, 100, 200, 30);
+		instruction.setBounds(250, 100, 300, 50);
+		instruction.setForeground(Color.white);
+		instruction.setFont(new Font("Serif", Font.BOLD, 25));
 		
 		player1= new JLabel("Player 1:");
-		player1.setBounds(100, 300, 100, 30);
+		player1.setBounds(100, 300, 100, 50);
+		player1.setForeground(Color.white);
+		player1.setFont(new Font("Serif", Font.BOLD, 15));
 		
 		player2= new JLabel("Player 2:");
-		player2.setBounds(550, 300, 100, 30);
+		player2.setBounds(550, 300, 100, 50);
+		player2.setForeground(Color.white);
+		player2.setFont(new Font("Serif", Font.BOLD, 15));
 		
-		  
 		
-		
+		Icon ic6=new ImageIcon(this.getClass().getResource("/image/background.jpeg"));
+		setLayout(new BorderLayout());
+		setContentPane(new JLabel(ic6));
 	
-		JButton Enter = new JButton("Enter");
-		Enter.setBounds(350, 500, 100, 60);
-		Enter.setForeground(Color.red);
-		Enter.setBackground(Color.BLACK);
-    
-		add(instruction);add(player1);add(player2);
-		
-		
-
+	add(instruction);add(player1);add(player2);
 	
 	setLayout(null);  
 	setBounds(300, 150, 800, 522);
-	setSize(800,800); 
+	setSize(800,522); 
 	  
 	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
 	}
