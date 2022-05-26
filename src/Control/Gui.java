@@ -154,7 +154,7 @@ public class Gui extends JFrame implements ActionListener {
 		
 		cw.getChamps().setPreferredSize (new Dimension (750, 500));
 		cw.getMain().add(cw.getChamps());
-		game = new Game(player1, player2);
+		
 		for(int i = 0; i<5 ; i++) {
 			for(int j= 0; j<5; j++) {
 				JButton btn=null;
@@ -191,6 +191,7 @@ public class Gui extends JFrame implements ActionListener {
 				player2.getTeam().add(c);
 				btn.setEnabled(false);
 				if(player2.getTeam().size()==3) {
+				game = new Game(player1, player2);
 				cw.setVisible(false);
 				mw.setVisible(true);
 				}
